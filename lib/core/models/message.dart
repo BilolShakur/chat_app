@@ -4,9 +4,9 @@ class Message {
   final String senderId;
   final String text;
   final DateTime timestamp;
-  final bool isSentByMe; // To differentiate between sent and received messages
-  final MessageType type; // New field
-  final String? mediaUrl; // New field for image/file path
+  final bool isSentByMe; // kimdan send bo'gani bilishchun mr 
+  final MessageType type;  // massageni typi voice/tedxt , file
+  final String? mediaUrl; // rasm  to' fayl faqat path file mas
   final String? fileName;
   final String? fileSize;
 
@@ -27,7 +27,7 @@ class Message {
       text: json['text'] ?? '',
       timestamp: DateTime.parse(json['timestamp']),
       isSentByMe:
-          json['isSentByMe'] ?? false, // Default to false if not provided
+          json['isSentByMe'] ?? false, //  def false bo'ladi 
       type: MessageType.values.firstWhere(
         (e) => e.toString() == 'MessageType.' + json['type'],
         orElse: () => MessageType.text,
