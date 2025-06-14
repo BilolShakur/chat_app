@@ -35,8 +35,8 @@ class _ChatPageState extends State<ChatPage> {
     );
 
     context.read<ChatBloc>().add(
-      ConnectEvent('ws://localhost:8080/ws'),
-    ); // Replace with your WebSocket URL
+      ConnectEvent(''),
+    ); // websocket olish kerak pul juq , it is  okey la la la wait till i get my money right  
 
     Future.delayed(Duration(milliseconds: 500), () {
       context.read<ChatBloc>().add(
@@ -169,7 +169,7 @@ class _ChatPageState extends State<ChatPage> {
     });
 
     _messageController.addListener(() {
-      setState(() {}); // Rebuild to show send icon when text is typed
+      setState(() {}); // i swar bowqa setstate iwlatmiman juda yomon tatataa peformance juda yomon bowqa iwlatmang mr bilol mr me
     });
   }
 
@@ -308,12 +308,12 @@ class _ChatPageState extends State<ChatPage> {
         ),
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.75,
-        ), // Limit bubble width
+        ), // source code ku bu ajoyib bowwqa omiman i swear i said but i get it again fuck me 
         decoration: BoxDecoration(color: color, borderRadius: borderRadius),
         child: Column(
           crossAxisAlignment: isSentByMe
               ? CrossAxisAlignment.end
-              : CrossAxisAlignment.start, // Corrected alignment
+              : CrossAxisAlignment.start, 
           children: [
             messageContent,
             const SizedBox(height: 5),
@@ -349,7 +349,7 @@ class _ChatPageState extends State<ChatPage> {
           255,
           255,
           255,
-        ), // Darker teal
+        ), 
         title: Row(
           children: [
             IconButton(
@@ -463,7 +463,7 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                         filled: true,
                         fillColor:
-                            Colors.grey[200], // Background color of text field
+                            Colors.grey[200], // tectfield ni bg si hupmi hup
                         contentPadding: const EdgeInsets.symmetric(
                           horizontal: 16.0,
                           vertical: 8.0,
@@ -501,7 +501,7 @@ class _ChatPageState extends State<ChatPage> {
                   const SizedBox(width: 8.0),
                   FloatingActionButton(
                     onPressed: _sendMessage,
-                    backgroundColor: const Color(0xFF128C7E), // WhatsApp green
+                    backgroundColor: const Color(0xFF128C7E), // WhatsApp old school esimga tushdi rahmat yahsi rang rahmat 
                     child: _messageController.text.isEmpty
                         ? const Icon(Icons.mic, color: Colors.white)
                         : const Icon(Icons.send, color: Colors.white),
