@@ -22,18 +22,18 @@ void init() {
     ),
   );
 
-  // Use cases
+  // Usecase
   sl.registerLazySingleton(() => ConnectToChat(sl()));
   sl.registerLazySingleton(() => DisconnectFromChat(sl()));
   sl.registerLazySingleton(() => GetMessages(sl()));
   sl.registerLazySingleton(() => SendMessage(sl()));
 
-  // Repository
+  // Repo sotorysadofjaosidfjifj
   sl.registerLazySingleton<ChatRepository>(
     () => ChatRepositoryImpl(remoteDataSource: sl()),
   );
 
-  // Data sources
+  // Dc 
   sl.registerLazySingleton<ChatRemoteDataSource>(
     () => ChatRemoteDataSourceImpl(),
   );
